@@ -17,3 +17,21 @@ exports[`InputComponent renders correctly 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`InputComponent renders the component correctly 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      for="test"
+    >
+      Test Label
+    </label>
+    <input
+      id="test"
+      name="test"
+      type="text"
+      value=""
+    />
+  </div>
+</DocumentFragment>
+`;
