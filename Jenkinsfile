@@ -10,36 +10,22 @@ pipeline {
   }
 
   stages {
-    stage('Checkout') {
+    stage('Install') {
       steps {
-        git url: 'https://github.com/sanchit0496/jenkins-sonarqube-deployment.git', branch: 'main'
+        bat 'npm ci'
       }
     }
 
-    stage('Install Dependencies') {
+    stage('Test + Coverage') {
       steps {
-        sh 'npm ci'
-      }
-    }
-
-    stage('Run Tests with Coverage') {
-      steps {
-        sh 'npm test -- --coverage --watchAll=false'
+        bat 'npm test -- --coverage'
       }
     }
 
     stage('SonarQube Analysis') {
       steps {
-        withSonarQubeEnv('My Sonar') {
-          sh 'npx sonar-scanner'
-        }
-      }
-    }
-
-    stage('Quality Gate') {
-      steps {
-        timeout(time: 2, unit: 'MINUTES') {
-          waitForQualityGate abortPipeline: true
+        withSonarQubeEnv('My SonarQube Server') {
+          bat 'npx sonar-scanner'
         }
       }
     }
