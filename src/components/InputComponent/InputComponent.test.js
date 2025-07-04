@@ -5,7 +5,7 @@ import InputComponent from './InputComponent' // Adjust the path as necessary
 
 describe('InputComponent', () => {
   // Snapshot Test
-  it('renders correctly', () => {
+  it('renders the component correctly', () => {
     const { asFragment } = render(
       <InputComponent label="Test Label" id="test" name="test" type="text" />,
     )
