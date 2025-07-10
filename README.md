@@ -9,10 +9,10 @@ We also added **quality gates**, which means if the code doesn't meet certain qu
 This setup is useful for any project where you want to catch issues early, write better code, and keep your development process smooth and reliable.
 
 
-## 📸 Jenkins Dashboard
+## 📸 SonarQube Dashboard
 
 ![SonarQube Dashboard](./assets/sqube_success.png)
 
-## 📸 SonarQube Dashboard
+## 📸 Jenkins Dashboard
 
 ![SonarQube Dashboard](./assets/jenkins_success.png)
