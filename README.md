@@ -11,8 +11,8 @@ This setup is useful for any project where you want to catch issues early, write
 
 ## 📸 Jenkins Dashboard
 
-![SonarQube Dashboard](./assets/sqube-success.png)
+![SonarQube Dashboard](./assets/sqube_success.png)
 
 ## 📸 SonarQube Dashboard
 
-![SonarQube Dashboard](./assets/jenkins-success.png)
+![SonarQube Dashboard](./assets/jenkins_success.png)
